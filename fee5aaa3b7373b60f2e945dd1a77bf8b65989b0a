@@ -1,3 +1,5 @@
 {"timestamp":"1457423254","author":"mattn.jp@gmail.com","location":{"commit":"3e986275749cb6efef0fc84e0de8fc4590fe2113","path":"autoload/gitappraise.vim","range":{"startLine":10}},"description":"what is matter?"}
 
 {"timestamp":"1457423267","author":"mattn.jp@gmail.com","location":{"commit":"3e986275749cb6efef0fc84e0de8fc4590fe2113","path":"autoload/gitappraise.vim","range":{"startLine":10}},"description":"what is matter?"}
+
+{"timestamp":"1457423417","author":"mattn.jp@gmail.com","location":{"commit":"3e986275749cb6efef0fc84e0de8fc4590fe2113","path":"autoload/gitappraise.vim","range":{"startLine":78}},"description":"What is matter?"}
