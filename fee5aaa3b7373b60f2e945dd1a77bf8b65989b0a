@@ -3,3 +3,5 @@
 {"timestamp":"1457421963","reviewRef":"refs/heads/feature2","targetRef":"refs/heads/master","requester":"mattn.jp@gmail.com","description":"Add TODO comment","baseCommit":"2ceea1dafb53f7a1fafdc18d48814dfcb165aec6"}
 
 {"timestamp":"1457422148","reviewRef":"refs/heads/feature2","targetRef":"refs/heads/master","requester":"mattn.jp@gmail.com","description":"Add TODO comment","baseCommit":"2ceea1dafb53f7a1fafdc18d48814dfcb165aec6"}
+
+{"timestamp":"1457423006","reviewRef":"refs/heads/feature2","targetRef":"refs/heads/master","requester":"mattn.jp@gmail.com","description":"Add TODO comment","baseCommit":"2ceea1dafb53f7a1fafdc18d48814dfcb165aec6"}
