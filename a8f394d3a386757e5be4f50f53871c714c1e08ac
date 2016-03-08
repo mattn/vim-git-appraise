@@ -3,3 +3,5 @@
 {"timestamp":"1457417894","author":"mattn.jp@gmail.com","location":{"commit":"a8f394d3a386757e5be4f50f53871c714c1e08ac","path":"autoload/gitappraise.vim","range":{"startLine":2}},"description":"why removed"}
 
 {\"timestamp\":\"1457420686\",\"author\":\"mattn.jp@gmail.com\",\"location\":{\"commit\":\"a8f394d3a386757e5be4f50f53871c714c1e08ac\",\"path\":\"autoload\\gitappraise.vim\",\"range\":{\"startLine\":18}},\"description\":\"\\\"なんだこれは！\\\"\"} a8f394d3a386757e5be4f50f53871c714c1e08ac
+
+{\"timestamp\":\"1457420813\",\"author\":\"mattn.jp@gmail.com\",\"location\":{\"commit\":\"a8f394d3a386757e5be4f50f53871c714c1e08ac\",\"path\":\"autoload/gitappraise.vim\",\"range\":{\"startLine\":18}},\"description\":\"\\\"なんだこれは！\\\"\"} a8f394d3a386757e5be4f50f53871c714c1e08ac
