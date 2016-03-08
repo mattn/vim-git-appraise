@@ -1,9 +1,16 @@
 function! gitappraise#enable()
   call gitappraise#disable()
 
-  let s:review = json_decode(system("git appraise show -json"))
+  try
+    let s:review = json_decode(system("git appraise show -json"))
+  catch
+    return
+  endtry
+  if has_key(s:review, 'comments')
+    return
+  endif
   for c in s:review.comments
-    if !has_key(c.comment.location.range, 'startLine')
+    if !has_key(c.comment.location, 'range') || !has_key(c.comment.location.range, 'startLine')
       continue
     endif
     let startLine = c.comment.location.range.startLine
@@ -33,10 +40,12 @@ function! gitappraise#add_comment()
   if empty(msg)
     return
   endif
-  let g:hoge = (printf("git appraise comment -m %s -f %s -l %d",
+  let id = substitute(system("git rev-parse HEAD"), '[ \t\r\n]', '', 'g')
+  call system(printf("git appraise comment -m %s -f %s -l %d %s",
   \ shellescape(msg),
   \ shellescape(substitute(expand('%'), '\\', '/', 'g')),
-  \ line('.')))
+  \ line('.'),
+  \ shellescape(id)))
   call gitappraise#enable()
 endfunction
 
@@ -47,7 +56,7 @@ function! gitappraise#show_comment()
   let l = line('.')
   let found = 0
   for c in s:review.comments
-    if !has_key(c.comment.location.range, 'startLine')
+    if !has_key(c.comment.location, 'range') || !has_key(c.comment.location.range, 'startLine')
       continue
     endif
     let startLine = c.comment.location.range.startLine
