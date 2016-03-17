@@ -6,7 +6,7 @@ function! gitappraise#enable()
   catch
     return
   endtry
-  if has_key(s:review, 'comments')
+  if !has_key(s:review, 'comments')
     return
   endif
   for c in s:review.comments
@@ -36,16 +36,18 @@ function! gitappraise#disable()
 endfunction
 
 function! gitappraise#add_comment()
+  if !exists('s:review')
+    return
+  endif
   let msg = input('Message: ')
   if empty(msg)
     return
   endif
-  let id = substitute(system("git rev-parse HEAD"), '[ \t\r\n]', '', 'g')
   call system(printf("git appraise comment -m %s -f %s -l %d %s",
   \ shellescape(msg),
   \ shellescape(substitute(expand('%'), '\\', '/', 'g')),
   \ line('.'),
-  \ shellescape(id)))
+  \ shellescape(s:review.revision)))
   call gitappraise#enable()
 endfunction
 
